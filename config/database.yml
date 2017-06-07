@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+development:
+  <<: *default
+  database: potok_calc_development
+  password: 1q2w3e4r
+test:
+  <<: *default
+  database: potok_calc_test
+  password: 1q2w3e4r
+production:
+  <<: *default
+  database: potok_calc_production
+  username: potok_calc
+  password: <%= ENV['POTOK_CALC_DATABASE_PASSWORD'] %>
