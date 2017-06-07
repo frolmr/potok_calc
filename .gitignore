@@ -17,3 +17,11 @@
 /yarn-error.log
 
 .byebug_history
+
+#Ignore vim temporary files
+*.swp
+*.swo
+*~
+
+# Ignore config files
+/config/database.yml

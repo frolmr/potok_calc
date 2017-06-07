@@ -1,0 +1,11 @@
+first:
+  body: 1000
+  payments: [300, 300, 300, 300]
+
+second:
+  body: 500
+  payments: [100, 300, 300]
+
+third:
+  body: 500
+  payments: [100, 450]
