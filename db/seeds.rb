@@ -1,7 +1,37 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+loans_data = [
+  {
+    body: 1_000_000,
+    payments: [
+      191_666.67,
+      191_666.67,
+      191_666.67,
+      191_666.67,
+      191_666.67,
+      191_666.65
+    ]
+  },
+  {
+    body: 1_000_000,
+    payments: [
+      191_666.67,
+      191_666.67,
+      191_666.67,
+      525_000.00
+    ]
+  },
+  {
+    body: 1_000_000,
+    payments: [
+      191_666.67,
+      191_666.67,
+      208_333.33,
+      208_333.33,
+      208_333.33,
+      208_333.33
+    ]
+  }
+]
+
+loans_data.each do |loan|
+  Loan.create(body: loan[:body], payments: loan[:payments])
+end
