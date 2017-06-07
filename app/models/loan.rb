@@ -8,7 +8,7 @@ class Loan < ApplicationRecord
   private
 
   def check_payments_type
-    if !payments.is_a?(Array)
+    unless payments.is_a?(Array)
       errors.add(:payments, 'Payments argument should be an array')
     end
   end

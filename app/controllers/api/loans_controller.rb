@@ -3,6 +3,7 @@ module Api
     def index
       render json: Loan.all
     end
+
     def create
       @loan = Loan.new(loan_params)
       if @loan.save
@@ -13,10 +14,6 @@ module Api
     end
 
     private
-
-    def serialize_payments(payments)
-      payments.split(",").map { |item| item.to_f }
-    end
 
     def loan_params
       params.require(:loan).permit(:body, payments: [])

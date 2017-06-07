@@ -2,7 +2,7 @@ require 'test_helper'
 
 class LoansCreateTest < ActionDispatch::IntegrationTest
   test 'create action should return correct status on request' do
-    post '/api/loans', params: { loan: { body: 1000, payments: [400, 400, 400]} }
+    post '/api/loans', params: { loan: { body: 1000, payments: [400, 400, 400] } }
     assert_response :success
   end
 
