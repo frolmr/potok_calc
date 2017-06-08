@@ -1,11 +1,13 @@
 first:
   body: 1000
-  payments: [300, 300, 300, 300]
+  term: 6
+  profit: 20
+  profit_rate: 0.04
+  payments: [170, 170, 170, 170, 170, 170]
 
 second:
-  body: 500
-  payments: [100, 300, 300]
-
-third:
-  body: 500
-  payments: [100, 450]
+  body: 1000
+  term: 6
+  profit: 10
+  profit_rate: 0.02
+  payments: [170, 170, 170, 500]

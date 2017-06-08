@@ -16,7 +16,7 @@ module Api
     private
 
     def loan_params
-      params.require(:loan).permit(:body, payments: [])
+      params.require(:loan).permit(:body, :term, payments: [])
     end
   end
 end

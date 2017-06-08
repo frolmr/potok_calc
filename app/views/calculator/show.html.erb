@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="col-md-6">
+    <h1>Калькулятор доходности</h1>
+    <h3>Для расчета доходности в абсолютном выражении, введите желаемую сумму инвестиций и нажмите кнопку "Рассчитать"</h3>
+
+    <h4>Текущие процентные ставки</h4>
+    <p>Оптимистичная: <%= number_to_percentage(@optimistic_percent, precision: 2) %></p>
+    <p>Реалистичная: <%= number_to_percentage(@realistic_percent, precision: 2) %></p>
+    <hr>
+
+    <div class="form-inline" id="flickr_load_form">
+      <div class="form-group">
+        <span>Ведите сумму: </span><%= text_field_tag :invest_sum %>
+        <%= submit_tag 'Рассчитать доходность', class: 'btn btn-primary', id: 'calculate_profit' %>
+      </div>
+    </div>
+    <br>
+  <div id="result"></div>
+  </div>
+</div>
