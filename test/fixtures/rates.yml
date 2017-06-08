@@ -1,0 +1,3 @@
+rate:
+  optimistic: 0.3
+  realistic: 0.31
