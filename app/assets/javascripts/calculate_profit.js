@@ -12,7 +12,7 @@ $(document).ready(function() {
         $('#result').text("");
         $('#result').append("<p>При вложении " + data + " ваша годовая доходность составит:</p>");
         $('#result').append("<p>Оптимистично: <strong>" + optimistic_profit.toFixed(2) + "</strong></p>");
-        $('#result').append("<p>Реалистично: <strong>" + realistic_profit.toFixed(2) + "</strong>  (на основании истрических данных)</p>");
+        $('#result').append("<p>Реалистично: <strong>" + realistic_profit.toFixed(2) + "</strong>  (на основании исторических данных)</p>");
       }
     });
   });
