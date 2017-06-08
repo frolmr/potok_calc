@@ -5,3 +5,11 @@ rvm:
 before_script:
   - cp config/database.travis.yml config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
+
+deploy:
+  provider: heroku
+  api_key: ENV['HEROKU_KEY']
+  app: ancient-island-91794
+  run:
+    - "rake db:migrate"
+    - "rake db:seed"
