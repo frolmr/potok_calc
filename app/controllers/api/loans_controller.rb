@@ -7,6 +7,7 @@ module Api
     def create
       @loan = Loan.new(loan_params)
       if @loan.save
+        RealisticRateUpdater.new(@loan.profit_rate).update_cache
         render json: @loan
       else
         render json: { errors: @loan.errors, status: :unprocessable_entity }

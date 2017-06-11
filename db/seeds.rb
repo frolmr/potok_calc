@@ -35,8 +35,6 @@ loans_data = [
   }
 ]
 
-Rate.create(optimistic: 0.3)
-
 loans_data.each do |loan|
   Loan.create(body: loan[:body], term: loan[:term], payments: loan[:payments])
 end

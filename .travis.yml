@@ -1,6 +1,10 @@
 language: ruby
 rvm:
   - 2.4.0
+services:
+  - redis-server
 before_script:
   - cp config/database.travis.yml config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
+  - sudo redis-server /etc/redis/redis.conf --port 6379
+

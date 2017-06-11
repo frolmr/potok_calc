@@ -4,7 +4,6 @@ class Loan < ApplicationRecord
   validate :check_payments_type
 
   before_validation :set_profit_and_profit_rate
-  after_save :set_realistic_rate
 
   private
 
@@ -21,9 +20,5 @@ class Loan < ApplicationRecord
   def set_profit_and_profit_rate
     self.profit = find_payments_sum - body
     self.profit_rate = profit / body * 12 / term
-  end
-
-  def set_realistic_rate
-    Rate.last.update(realistic: RealisticRateUpdater.new.calculate_realistic_rate)
   end
 end

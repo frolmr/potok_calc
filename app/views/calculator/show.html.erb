@@ -5,7 +5,7 @@
 
     <h4>Текущие процентные ставки</h4>
     <p>Оптимистичная: <%= number_to_percentage(@optimistic_percent, precision: 2) %></p>
-    <p>Реалистичная: <%= number_to_percentage(@realistic_percent, precision: 2) %></p>
+    <p>Реалистичная: <span id="realistic_percent"><%= number_to_percentage(@realistic_percent, precision: 2) %></span></p>
     <hr>
 
     <div class="form-inline" id="flickr_load_form">
