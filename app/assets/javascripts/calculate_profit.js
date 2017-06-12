@@ -14,7 +14,7 @@ $(document).ready(function() {
         $('#result').append("<p>При вложении " + data + " ваша годовая доходность составит:</p>");
         $('#result').append("<p>Оптимистично: <strong>" + optimistic_profit.toFixed(2) + "</strong></p>");
         $('#result').append("<p>Реалистично: <strong>" + realistic_profit.toFixed(2) + "</strong>  (на основании исторических данных)</p>");
-        $('#realistic_percent').text(realistic_percent.toFixed(2) + "%");
+        $('#realistic_percent').text(" " + realistic_percent.toFixed(2) + "%");
       }
     });
   });

@@ -27,3 +27,5 @@ yarn.lock
 
 # Ignore config files
 /config/database.yml
+# Ignore application configuration
+/config/application.yml

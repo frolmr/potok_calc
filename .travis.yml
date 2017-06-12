@@ -1,8 +1,8 @@
 language: ruby
 rvm:
   - 2.4.0
-services:
-  - redis-server
+notifications:
+  slack: mrfrol:0NT2YPmTRKMomqG3P9QawZeZ
 before_script:
   - cp config/database.travis.yml config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
