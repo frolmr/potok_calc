@@ -3,6 +3,8 @@ rvm:
   - 2.4.0
 notifications:
   slack: mrfrol:0NT2YPmTRKMomqG3P9QawZeZ
+services:
+  - redis-server
 before_script:
   - cp config/database.travis.yml config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
